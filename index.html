@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador Enigma + Máquina de Turing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Título principal de la aplicación -->
+<h1>🧠 Simulador Universitario: Máquina de Turing + Enigma</h1>
+
+<!-- Panel de control principal -->
+<div class="panel">
+
+  <!-- Campo de entrada del texto a cifrar -->
+  <input id="input" placeholder="Ej: HOLA MUNDO" />
+
+  <!-- Selector del estado inicial (clave de cifrado) -->
+  <select id="key" title="Estado inicial de la máquina de Turing">
+    <option value="1">Estado inicial q1</option>
+    <option value="2">Estado inicial q2</option>
+    <option value="3">Estado inicial q3</option>
+  </select>
+
+  <!-- Botón que inicializa la máquina -->
+  <button onclick="start()">Iniciar</button>
+
+  <!-- Botón que ejecuta un solo paso del algoritmo -->
+  <button onclick="step()">Paso</button>
+
+  <!-- Botón para ejecución automática y pausa -->
+  <button onclick="toggleAuto()">Auto / Pausa</button>
+
+  <!-- Botón para reiniciar completamente la máquina -->
+  <button onclick="resetMachine()">Reset</button>
+</div>
+
+<hr>
+<!-- Línea divisoria visual -->
+
+<!-- Información del estado actual de la máquina -->
+<h3>
+  Estado actual:
+  <span id="state">-</span> |
+  Rotor shift:
+  <span id="shift">-</span>
+</h3>
+
+<!-- Contenedor visual de la cinta (máquina de Turing) -->
+<div id="tape-container">
+  <div id="tape"></div>
+</div>
+
+<!-- Sección de explicación paso a paso -->
+<h3>📘 Explicación paso a paso</h3>
+
+<!-- 
+  <pre> se usa para mantener saltos de línea
+  Ideal para mostrar logs del proceso de cifrado
+-->
+<pre id="explanation"></pre>
+
+<!-- Sección del resultado final del cifrado -->
+<h3>🔐 Resultado final</h3>
+
+<!-- Caja donde se muestra el texto cifrado -->
+<div id="result-box">—</div>
+
+<!-- Enlace al archivo JavaScript que contiene la lógica -->
+<script src="script.js"></script>
+
+</body>
+</html>

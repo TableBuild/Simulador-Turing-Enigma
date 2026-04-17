@@ -1,0 +1,177 @@
+
+body {
+  /* Color de fondo base (por si no carga la imagen) */
+  background-color: #e6edf3;
+
+  /* Fuente principal del sitio */
+  font-family: Arial, sans-serif;
+
+  /* Centra el texto por defecto */
+  text-align: center;
+
+  /* Elimina márgenes por defecto del navegador */
+  margin: 0;
+
+  /* Padding general del cuerpo */
+  padding: 20px;
+
+  /* Color del texto */
+  color: white;
+
+  /* Imagen de fondo con un filtro oscuro encima
+     - linear-gradient oscurece la imagen
+     - url carga la imagen del candado */
+  background-image: 
+    linear-gradient(rgba(13,17,23,0.85), rgba(13,17,23,0.85)),
+    url("candado.jpg");
+
+  /* La imagen cubre toda la pantalla */
+  background-size: cover;
+
+  /* Centra la imagen */
+  background-position: center;
+
+  /* Hace el fondo fijo al hacer scroll */
+  background-attachment: fixed;
+}
+
+/* ===============================
+   PANEL DE CONTROLES
+   =============================== */
+.panel {
+  /* Separación inferior del panel */
+  margin-bottom: 10px;
+}
+
+/* Estilos comunes para inputs, selectores y botones */
+input, select, button {
+  padding: 8px;            /* Espacio interno */
+  margin: 5px;             /* Separación entre elementos */
+  border-radius: 5px;      /* Bordes redondeados */
+  border: none;            /* Quita el borde por defecto */
+}
+
+/* Botones principales */
+button {
+  background: #238636;     /* Verde tipo GitHub */
+  color: white;            /* Texto blanco */
+  cursor: pointer;         /* Cursor de mano */
+}
+
+/* Cambio de color al pasar el mouse */
+button:hover {
+  background: #2ea043;
+}
+
+/* ===============================
+   CINTA (MÁQUINA DE TURING)
+   =============================== */
+
+/* Contenedor visible de la cinta */
+#tape-container {
+  width: 420px;            /* Ancho fijo */
+  overflow: hidden;        /* Oculta lo que se sale */
+  margin: 20px auto;       /* Centrado horizontal */
+  background: rgba(73, 85, 102, 0.95);
+  border: 2px solid #444;
+}
+
+/* Cinta completa que se desplaza horizontalmente */
+#tape {
+  display: flex;           /* Celdas en fila */
+  transition: transform 0.35s ease; /* Animación suave */
+}
+
+/* Cada celda de la cinta */
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+
+  /* Centra el contenido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0d1117;
+  font-weight: bold;
+  color: white;
+}
+
+/* Celda donde está el cabezal */
+.head {
+  background: #e63946;     /* Rojo para resaltar */
+  color: white;
+}
+
+/* ===============================
+   EXPLICACIÓN PASO A PASO
+   =============================== */
+
+/* Panel donde se muestra el proceso de cifrado */
+#explanation {
+  width: 700px;
+  height: 320px;
+  margin: 20px auto;
+  padding: 15px;
+
+  background: rgba(22,27,34,0.95);
+  text-align: left;
+
+  /* Scroll vertical si hay mucho texto */
+  overflow-y: auto;
+
+  border: 1px solid #444;
+
+  /* Mantiene saltos de línea */
+  white-space: pre-wrap;
+}
+
+/* ===============================
+   RESULTADO FINAL
+   =============================== */
+
+/* Caja que muestra el texto cifrado */
+#result-box {
+  width: 700px;
+  margin: 15px auto;
+  padding: 15px;
+
+  background: rgba(10,10,10,0.95);
+  border: 2px solid #2ea043;
+
+  color: #2ea043;          /* Verde destacado */
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;    /* Espaciado entre letras */
+}
+
+/* ===============================
+   COLORES PARA LA EXPLICACIÓN
+   =============================== */
+
+/* Símbolo leído */
+.read {
+  color: #9da9b4;
+}
+
+/* Paso por los rotores */
+.rotor {
+  color: #58a6ff;
+}
+
+/* Paso por el reflector */
+.reflector {
+  color: #f2cc60;
+}
+
+/* Símbolo escrito */
+.write {
+  color: #2ea043;
+}
+
+/* Cambio de estado */
+.transition {
+  color: #f85149;
+  font-weight: bold;
+}

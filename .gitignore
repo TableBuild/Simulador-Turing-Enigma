@@ -1,0 +1,37 @@
+# =============================
+# Archivos del sistema operativo
+# =============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================
+# Configuración de editores / IDE
+# =============================
+.vscode/
+.idea/
+*.code-workspace
+
+# =============================
+# Dependencias (por si crece el proyecto)
+# =============================
+node_modules/
+
+# =============================
+# Variables de entorno
+# =============================
+.env
+
+# =============================
+# Archivos temporales y backups
+# =============================
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# =============================
+# Cache del navegador (opcional)
+# =============================
+.cache/
